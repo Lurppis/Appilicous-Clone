@@ -22,6 +22,7 @@
  
  html {
    @include font($font-normal); /* 1 */
+   line-height: 1.6;
    -ms-text-size-adjust: 100%; /* 2 */
    -webkit-text-size-adjust: 100%; /* 2 */
    @if $legacy_browser_support {

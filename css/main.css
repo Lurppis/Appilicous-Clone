@@ -20,6 +20,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   /* 1 */
+  line-height: 1.6;
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
@@ -418,15 +419,56 @@ th {
   box-sizing: border-box;
 }
 
+body {
+  color: #048ca8;
+}
+
 img {
   width: 100%;
   height: auto;
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 .75em;
+}
+
+h1:last-child, h2:last-child, h3:last-child,
+h4:last-child, h5:last-child, h6:last-child,
+p:last-child {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title-large {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.title-large span {
+  font-weight: 300;
+}
+
+.text-intro {
+  font-size: 1.2rem;
 }
 
 .main-header {
@@ -465,4 +507,35 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.btn {
+  padding: .75rem 2.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn:not(:last-of-type) {
+  margin-bottom: .6em;
+}
+
+.btn--primary {
+  background: #d31869;
+  color: white;
+  border: 2px solid #d31869;
+}
+
+.btn--primary:hover, .btn--primary:focus {
+  background: #a51352;
+}
+
+.btn--secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn--secondary:hover, .btn--secondary:focus {
+  background: white;
+  color: #048ca8;
 }
