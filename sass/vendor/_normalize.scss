@@ -13,7 +13,7 @@
     ========================================================================== */
  
  /**
-  * 1. Set default font family to sans-serif.
+  * 1. Set default font family to Roboto with proper weight.
   * 2. Prevent iOS and IE text size adjust after device orientation change,
   *    without disabling user zoom.
   * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
@@ -21,7 +21,7 @@
   */
  
  html {
-   font-family: "Roboto", sans-serif; /* 1 */
+   @include font($font-normal); /* 1 */
    -ms-text-size-adjust: 100%; /* 2 */
    -webkit-text-size-adjust: 100%; /* 2 */
    @if $legacy_browser_support {
