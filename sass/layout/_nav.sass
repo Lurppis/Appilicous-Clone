@@ -1,4 +1,5 @@
 .main-nav
+    display: none
     background: $accent
     position: absolute
     top: 0
@@ -7,20 +8,36 @@
     font-size: 1.2rem
     overflow: hidden
 
-    transition: all ease-in-out 250ms
+    transition: all ease-in-out 500ms
 
+    @media (min-width: 725px)
+        display: inline
+        flex: auto
+        background: none
+        margin-top: 1em
+        margin-left: 12em
+        left: 0
     ul
         display: flex
         flex-direction: column
         text-align: center
         justify-content: space-around
         height: 100vh
+        @media (min-width: 725px)
+            flex-direction: row
+            height: auto
 
     li
         background: $accent
         flex: 1 1 auto
         border-bottom: 1px solid rgba(0, 0, 0, .25)
         display: flex
+
+        @media (min-width: 720px)
+            background: none
+            border: none
+            display: inline-block
+            text-align: right
     
     a
         color: $text-inverse
@@ -35,6 +52,8 @@
 
     &.is-open
         left: 0
+        display: inline
+
 
 // Mobile Menu
 
@@ -48,6 +67,9 @@
 
     &:hover
         background: $accent
+    
+    @media (min-width: 725px)
+        display: none
 
 .hamburger, .hamburger::before, .hamburger::after
     content: ''

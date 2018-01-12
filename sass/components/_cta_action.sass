@@ -1,0 +1,38 @@
+.cta
+    background: $secondary
+    background-image: url(../img/call-to-action-background.jpg)
+    background-size: cover
+    background-position: center
+    padding: 5em 0
+    background-blend-mode: multiply
+    color: $text-inverse
+    position: relative
+    overflow: hidden
+
+    p
+        padding-bottom: 2em
+
+    @media (min-width: 720px)
+        padding: 10em 0
+
+        &::before, &::after
+            content: ''
+            display: block
+            background: $accent
+            position: absolute
+            width: 100%
+            border: 1em solid $white
+
+        &::before
+            top: -1em
+            bottom: 0
+            transform: skewX(50deg)
+            left: 100%
+        &::after
+            top: 0
+            bottom: -1em
+            transform: skewX(50deg)
+            right: 100%
+        
+        .container--cta
+            width: 50%
