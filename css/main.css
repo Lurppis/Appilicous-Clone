@@ -552,12 +552,9 @@ h2 {
 @media (min-width: 725px) {
   .main-nav {
     display: inline;
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
     background: none;
-    margin-top: 1em;
-    margin-left: 12em;
+    margin-top: 1.5em;
+    margin-left: 35%;
     left: 0;
   }
 }
