@@ -2,9 +2,12 @@
     background: $accent
     position: absolute
     top: 0
-    left: 0
+    left: 100%
     right: 0
     font-size: 1.2rem
+    overflow: hidden
+
+    transition: all ease-in-out 250ms
 
     ul
         display: flex
@@ -14,13 +17,57 @@
         height: 100vh
 
     li
-        background: lightblue
+        background: $accent
         flex: 1 1 auto
-        border-bottom:  1px solid rgba(0, 0, 0, .25)
+        border-bottom: 1px solid rgba(0, 0, 0, .25)
         display: flex
-        align-items: center
-        justify-content: center
     
     a
         color: $text-inverse
         text-decoration: none
+        flex-basis: 100%
+        display: flex                       // Allow us to make link clickable at a whole space
+        align-items: center
+        justify-content: center
+        
+        &:hover
+            background: rgba(0,0,0,.10)
+
+    &.is-open
+        left: 0
+
+// Mobile Menu
+
+.nav-toggle
+    display: block
+    padding: 1em
+    position: absolute
+    right: 1em
+    top: 1em
+    cursor: pointer
+
+    &:hover
+        background: $accent
+
+.hamburger, .hamburger::before, .hamburger::after
+    content: ''
+    display: block
+    width: 2em
+    height: .2em
+    background: $white
+    transition: all ease-in-out 250ms
+
+.hamburger::before
+    transform: translateY(-.4em)
+
+.hamburger::after
+    transform: translateY(.2em)
+
+.hamburger.is-open
+    transform: rotate(45deg)
+
+    &::after
+        transform: rotate(-90deg)
+
+    &::before
+        display: none
