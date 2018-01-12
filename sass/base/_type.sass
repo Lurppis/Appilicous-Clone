@@ -11,11 +11,26 @@ h1
     font-weight: $font-light
     line-height: 1.15
     text-transform: uppercase
+    letter-spacing: 3px
 h2
     font-weight: 1.2rem
     line-height: 1
     text-transform: uppercase
     letter-spacing: 2px
+
+.title-box
+    background: $accent
+    color: $text-inverse
+    margin: 0 auto
+    padding: 1em
+    transform: translateY(30%)
+    max-width: 90%
+    @media (min-width: 650px)
+        max-width: 600px
+        transform: translateY(50%)
+
+.after-title-box
+    padding-top: 6em
 
 .title-large
     font-size: 3rem

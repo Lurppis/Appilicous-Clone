@@ -441,6 +441,16 @@ img {
   list-style: none;
 }
 
+.lg-screen {
+  display: none;
+}
+
+.bg-main {
+  background: #048ca8;
+  color: white;
+  padding: 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em;
 }
@@ -456,6 +466,7 @@ h1 {
   font-weight: 300;
   line-height: 1.15;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -463,6 +474,30 @@ h2 {
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 1em;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+  max-width: 90%;
+}
+
+@media (min-width: 650px) {
+  .title-box {
+    max-width: 600px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+}
+
+.after-title-box {
+  padding-top: 6em;
 }
 
 .title-large {
@@ -637,12 +672,8 @@ h2 {
   text-align: center;
 }
 
-.hero-img {
-  display: none;
-}
-
 .sales-points {
-  padding: 10vh 0;
+  padding: 10vh 0 0;
 }
 
 .sales-points .sales-point {
